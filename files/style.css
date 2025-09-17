@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color:hsl(0, 0%, 12%);
 }
 
 body {
@@ -18,12 +19,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   border-radius: 20px;
   padding: 20px;
   width: 95%px;  
-  border: solid rebeccapurple;
+  border: none;
+  color: hsl(0, 0%, 8%);
 
 }
   
@@ -64,7 +67,7 @@ body {
   display: flex;
   justify-content: center;    
   align-items: center;   
-  background-color: hsl(0, 0%, 12%);    
+  background-color: hsl(0, 0%, 20%);    
   
   color: #fff;
   border-radius: 5px;
@@ -88,4 +91,58 @@ body {
 img {
   border-radius: 50%;
   width: 100px;
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+  #main {
+    width: 90%;           /* Make container narrower */
+    padding: 15px;
+  }
+
+  #head #name {
+    font-size: 16px;      /* Slightly smaller name */
+  }
+
+  #head #title {
+    font-size: 14px;      /* Reduce title font size */
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .links {
+    width: 100%;          /* Buttons take full width */
+    padding: 10px 0;
+    font-size: 14px;      /* Slightly smaller text */
+  }
+
+  img {
+    width: 80px;          /* Smaller avatar */
+  }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  #main {
+    padding: 10px;
+  }
+
+  #head #name {
+    font-size: 14px;
+  }
+
+  #head #title {
+    font-size: 12px;
+  }
+
+  .links {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  img {
+    width: 60px;
+  }
 }
