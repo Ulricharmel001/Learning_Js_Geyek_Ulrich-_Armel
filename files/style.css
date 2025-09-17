@@ -18,10 +18,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 
   border-radius: 20px;
   padding: 20px;
-  width: 350px;                   
+  width: 95%px;  
+  border: solid rebeccapurple;
+
+}
+  
+                 
 
 #head {
   display: flex;              
@@ -31,6 +37,29 @@ body {
   padding: 20px;
 }
 
+#head #name {
+    color: rgb(40, 197, 37);
+    font-size: 18px;
+    margin-top: 13px;
+
+}
+#head #location {
+    color: rgb(40, 197, 37);
+
+    
+}
+
+#head #title {
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: -20px;
+    font-size: large;
+    
+
+    
+
+    
+}
 .links {
   display: flex;
   justify-content: center;    
