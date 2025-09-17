@@ -8,7 +8,7 @@ This repository contains my first hands-on project: a simple profile page that c
 
 ### Features
 - Profile image added.  
-- Social media links displayed in separate sections using `<div>` elements.  
+- Social media links displayed in separate sections using `<a>` elements.  
 - Styled layout with CSS.  
 - Media query included to make the page responsive on different screen sizes.  
 
