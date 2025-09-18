@@ -1,0 +1,12 @@
+# Ignore system files
+.DS_Store      # macOS folder metadata
+Thumbs.db      # Windows image cache
+
+# Ignore editor/IDE settings
+.vscode/       # VS Code workspace settings
+
+# Ignore temporary files
+*.swp          # Swap files created by editors
+
+# Ignore node dependencies (if you use any tools like npm)
+node_modules/

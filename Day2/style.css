@@ -1,0 +1,119 @@
+/* Reset margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background and font */
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Hero image */
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: hsl(223, 47%, 23%);
+}
+
+.content p {
+  font-size: 0.9rem;
+  color: hsl(224, 23%, 55%);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Plan section */
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.plan img {
+  width: 40px;
+  height: 40px;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  flex: 1;
+  text-align: left;
+}
+
+.plan-details span {
+  color: hsl(223, 47%, 23%);
+}
+
+.amount {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.plan a {
+  color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  width: 80%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.proceed {
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+}
+
+.proceed:hover {
+  background-color: hsl(245, 75%, 60%);
+}
+
+.cancel {
+  background-color: hsl(224, 23%, 55%);
+  color: #fff;
+}
+
+.cancel:hover {
+  background-color: hsl(223, 47%, 23%);
+}
