@@ -7,4 +7,4 @@ So far, I’ve explored:
 - Different kinds of loops: `while`, `for`, and nested loops.  
 - The use of `switch` statements.  
 
-Each topic was backed up with hands-on exercises to help me practice and understand the concepts better.  
+Each topic was backed up with hands-on exercises to help me practice and understand the concepts better.    ..
