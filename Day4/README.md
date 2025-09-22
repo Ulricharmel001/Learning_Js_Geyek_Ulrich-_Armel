@@ -7,4 +7,6 @@ So far, I’ve explored:
 - Different kinds of loops: `while`, `for`, and nested loops.  
 - The use of `switch` statements.  
 
+Explore math object function in js, random for generating random decimal and ciel to round it up to nearest integer 
+
 Each topic was backed up with hands-on exercises to help me practice and understand the concepts better.    ..
