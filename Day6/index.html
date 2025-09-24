@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Object</title>
+</head>
+<body>
+  <h1 id="output">Testing Object</h1>
+  <button onclick="showData()">Show Name</button>
+  <button onclick="changeName()">Change Name</button>
+
+  <script>
+    // Test object
+    const testData = {
+      id: 101,
+      name: "Ulrich",
+      isActive: true,
+      scores: [95, 82, 77],
+      address: {
+        street: "123 Main St",
+        city: "Yaounde",
+        country: "Cameroon"
+      },
+      greet: function() {
+        return `Hello, my name is ${this.name}`;
+      }
+    };
+
+    // Show the name in the h1
+    function showData() {
+      document.getElementById('output').textContent = testData.name;
+    }
+
+    // Change the name dynamically
+    function changeName() {
+      testData.name = "Ulrich Updated";
+      document.getElementById('output').textContent = testData.greet();
+    }
+  </script>
+</body>
+</html>
