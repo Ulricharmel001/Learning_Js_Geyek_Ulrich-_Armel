@@ -1,0 +1,152 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  padding: 0 10px; 
+ 
+
+  }
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+  color: #000;
+}
+
+.modal button {
+  margin: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal button:hover {
+  background-color: #cc5200;
+}
+
+/* Game container */
+main {
+  display: none;
+  background: #000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  height: 25px;
+  text-align: center;
+  outline: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: #fff;
+  color: #000;
+}
+
+button#guessButton {
+  margin-top: 10px;
+  padding: 10px 24px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button#guessButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+h1 {
+  font-family: serif;
+  margin-bottom: 15px;
+  color: #ff6600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(255, 165, 0, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  input, button#guessButton {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  main {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-box {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #message {
+    font-size: 16px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

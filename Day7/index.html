@@ -1,67 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+ 
 </head>
 <body>
-  <h1>Number Guessing Game</h1>
-  <p>Guess a number between 1 and 10</p>
 
-  <input type="number" id="guessInput" placeholder="Enter a positive number" min="1" />
-  <button id="guessButton" onclick="checkGuess()" disabled>Guess</button>
-  <h3 id="message"></h3>
+  <!-- Consent Modal -->
+  <div id="consentModal" class="modal">
+    <div class="modal-box">
+      <p>Do you want to play the Guess the Number game?</p>
+      <button id="startGame">Yes</button>
+      <button id="cancelGame">No</button>
+    </div>
+  </div>
 
-  <script>
-    const input = document.getElementById("guessInput");
-    const button = document.getElementById("guessButton");
-    const message = document.getElementById("message");
+  <!-- Game Container -->
+  <div class="game-container">
+    <h1> I have choose a random number between 1 and 10</h1>
+    <h2>Guess the correct Number</h2>
+    <input type="number" inputmode="numeric" step="1" id="guessInput" placeholder="Enter your guess" min="200" max="300" st/>
+    <button id="guessButton" disabled>Submit Guess</button>
+    <p id="message"></p>
+  </div>
 
-    let targetNumber = Math.floor(Math.random() * 10) + 1; 
-    let attempts = 0;
-
-    console.log("Initial target number:", targetNumber);
-
-    // Enable button only for valid positive numbers
-    input.addEventListener("input", () => {
-      const value = Number(input.value);
-      console.log("User typed:", value);
-
-      if (value > 0 && value <= 10) {
-        button.disabled = false;
-        message.textContent = "";
-      } else {
-        button.disabled = true;
-        if (input.value !== "") {
-          message.textContent = "Remember that you can only guess between 1 and 10!";
-          message.style.color = "green";
-        } else {
-          message.textContent = "";
-        }
-      }
-    });
-
-    function checkGuess() {
-      const userGuess = Number(input.value);
-      attempts++;
-
-      console.log(`Attempt ${attempts}: user guessed ${userGuess}, target was ${targetNumber}`);
-
-      if (userGuess === targetNumber) {
-        message.textContent = `Congratulations, You guessed the right number! "${userGuess}".`;
-        message.style.color = "green";
-      } else {
-        message.textContent = `oops, Try your luck again! ${userGuess} is not the correct number.`;
-        message.style.color = "red";
-      }
-
-      // Always reset for next round
-      targetNumber = Math.floor(Math.random() * 10) + 1;
-      console.log("New target number:", targetNumber);
-
-      // Reset input and disable button
-      input.value = "";
-      button.disabled = true;
-    }
+  <script src="index.js">
+    
   </script>
 </body>
 </html>
