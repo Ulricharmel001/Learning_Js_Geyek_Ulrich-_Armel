@@ -12,7 +12,7 @@
   <!-- Consent Modal -->
   <div id="consentModal" class="modal">
     <div class="modal-box">
-      <p>Do you want to play the Guess the Number game?</p>
+      <p>Do you Wish to play the Number Guessing Game?</p>
       <button id="startGame">Yes</button>
       <button id="cancelGame">No</button>
     </div>
@@ -22,13 +22,15 @@
   <div class="game-container">
     <h1> I have choose a random number between 1 and 10</h1>
     <h2>Guess the correct Number</h2>
-    <input type="number" inputmode="numeric" step="1" id="guessInput" placeholder="Enter your guess" min="200" max="300" st/>
+    <input type="number" 
+    inputmode="numeric" step="1" 
+    id="guessInput" placeholder="Enter your guess" 
+    min="200" max="300" required pattern="[0-9]*" />
     <button id="guessButton" disabled>Submit Guess</button>
     <p id="message"></p>
   </div>
 
-  <script src="index.js">
-    
-  </script>
+  <script src="index.js">  
+  </script> 
 </body>
 </html>

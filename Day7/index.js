@@ -93,3 +93,9 @@ input.addEventListener("keypress", (e) => {
     message.textContent="decimal not allowed, only whole numbers"
   }
 });
+
+
+input.addEventListener("input", () => {
+  // Remove any non-digit characters
+  input.value = input.value.replace(/\D/g, '');
+});
