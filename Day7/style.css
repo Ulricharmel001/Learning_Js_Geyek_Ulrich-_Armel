@@ -153,3 +153,10 @@ button#guessButton:disabled {
     font-size: 16px;
   }
 }
+
+  input, button#guessButton {
+    width: 93%;
+    margin: 8px 8px;
+  }
+  
+  

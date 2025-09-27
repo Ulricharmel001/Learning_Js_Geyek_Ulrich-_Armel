@@ -42,7 +42,7 @@ input.addEventListener("input", () => {
       if (input.value > 10) {
         message.textContent = "Your guess must be between 1 and 10.";
       } else if (input.value < 1) {
-        message.textContent = "Your guess must be at least 1 and no more than 10.";
+        message.textContent = "Your guess must be at least 1 and not more than 10.";
         button.disabled = true;
       } else if (input.value === ".") {
         message.textContent = "Decimals are not allowed, use whole numbers only.";
