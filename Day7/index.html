@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess the Number Game</title>
- 
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .game-container, .modal-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .game-container input,
+    .game-container button {
+      margin: 10px 0;
+    }
+
+    #message {
+      min-height: 24px; /* keeps space even when empty */
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Consent Modal -->
   <div id="consentModal" class="modal">
     <div class="modal-box">
-      <p>Do you Wish to play the Number Guessing Game?</p>
+      <p>Do you want to play the Number Guessing Game?</p>
       <button id="startGame">Yes</button>
       <button id="cancelGame">No</button>
     </div>
@@ -20,17 +57,19 @@
 
   <!-- Game Container -->
   <div class="game-container">
-    <h1> I have choose a random number between 1 and 10</h1>
-    <h2>Guess the correct Number</h2>
+    <h1>I have chosen a random number between 1 and 10</h1>
+    <h2>Try to guess the correct number</h2>
     <input type="number" 
-    inputmode="numeric" step="1" 
-    id="guessInput" placeholder="Enter your guess" 
-    min="200" max="300" required pattern="[0-9]*" />
+           inputmode="numeric" 
+           step="1" 
+           id="guessInput" 
+           placeholder="Enter your guess" 
+           min="1" max="10" 
+           required pattern="[0-9]*" />
     <button id="guessButton" disabled>Submit Guess</button>
     <p id="message"></p>
   </div>
 
-  <script src="index.js">  
-  </script> 
+  <script src="index.js"></script>
 </body>
 </html>
