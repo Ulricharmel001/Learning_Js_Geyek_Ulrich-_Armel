@@ -55,27 +55,27 @@ input.addEventListener("input", () => {
 // Check guess function
 function checkGuess() {
   const userGuess = Number(input.value);
-  Math.ceil(userGuess)
   attempts++;
 
   if (userGuess === targetNumber) {
     message.textContent = `Congratulations! You guessed the correct number. It took you ${attempts} attempt(s).`;
     message.style.color = "green";
-    message.style.borderEndEndRadius = "1px";
+    // optional: use borderBottomRightRadius instead if that's what you meant
+    message.style.borderBottomRightRadius = "4px";
   } else if (userGuess > targetNumber) {
     message.textContent = `${userGuess} is too high. Try again!`;
     message.style.color = "red";
   } else if (userGuess < targetNumber) {
-    col
     message.textContent = `${userGuess} is too low. Try again!`;
     message.style.color = "red";
   }
 
   input.value = "";
   button.disabled = true;
-}
 
-targetNumber = Math.ceil(Math.random() * 10);//generate a new random number after each attempt
+  // regenerate a new number after every attempt
+  targetNumber = Math.ceil(Math.random() * 10);
+}
 
 // Attach guess button
 button.addEventListener("click", checkGuess);
