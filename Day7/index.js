@@ -66,6 +66,7 @@ function checkGuess() {
     message.textContent = `${userGuess} is too high. Try again!`;
     message.style.color = "red";
   } else if (userGuess < targetNumber) {
+    col
     message.textContent = `${userGuess} is too low. Try again!`;
     message.style.color = "red";
   }
@@ -73,6 +74,8 @@ function checkGuess() {
   input.value = "";
   button.disabled = true;
 }
+
+targetNumber = Math.ceil(Math.random() * 10);//generate a new random number after each attempt
 
 // Attach guess button
 button.addEventListener("click", checkGuess);
