@@ -27,7 +27,8 @@ button {
     border: none;
     border-radius: 2px;
     margin-bottom: 4px;
-    margin-top: 4p
+    margin-top: 4p;
+    cursor: pointer;
 }
 button:hover{
     background: black;
