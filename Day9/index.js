@@ -21,19 +21,22 @@ function add() {
 
 
 function subtract() {
-    sum.textContent = num1 - num2
+   sum.textContent = `Sum : ${num1 - num2}`
     console.log("add clicked")
 }
 
 function multiply() {
-    sum.textContent = num1 * num2
+   sum.textContent = `Sum : ${num1 * num2}`
     console.log("add clicked")
 }
+
 
 
 function divide() {
-    sum.textContent =  num1 / num2
+   sum.textContent = `Sum : ${num1 / num2}`
     console.log("add clicked")
 }
+
+
 
 
