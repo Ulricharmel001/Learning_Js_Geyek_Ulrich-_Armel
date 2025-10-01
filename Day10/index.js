@@ -27,7 +27,7 @@ if (age <=6){
 }
 
 
-let largeCountries = ["China","India","USA","Indonesia","Pakistan"]
+// let largeCountries = ["China","India","USA","Indonesia","Pakistan"]
 
 /* Use a for loop to log the following to the console:
 
@@ -39,14 +39,48 @@ The 5 largest countries in the world:
 - Pakistan
 */
 
-for (i=0; i<largeCountries.length; i++){
-    console.log("->",largeCountries[i])
-}
+// for (i=0; i<largeCountries.length; i++){
+//     console.log("->",largeCountries[i])
+// }
 
 
+
+let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
 
 // You need to help me fixup the largeCountries array so that 
 // China and Pakistan are added back into their respective places
 
 // Use push() & pop() and their counterparts unshift() & shift()
 // Google how to use unshift() and shift()
+largeCountries.pop()
+console.log(largeCountries)
+largeCountries.push("Pakistan")
+console.log(largeCountries)
+largeCountries.unshift("China")
+console.log(largeCountries)
+
+
+let dayOfMonth = 14
+let weekday = "Friday"
+
+// If it is Friday the 13th, log out this spooky face: 😱
+// Use the logical "AND operator" -> &&
+
+
+if(dayOfMonth === 13 && weekday ==="Friday" ){
+    console.log("😱")
+}else{
+    console.log("not friday 13")
+}
+
+let hands = ["rock", "paper", "scissor"]
+
+// Create a function that returns a random item from the array
+
+
+function getHand() {
+    let randomIndex = Math.floor( Math.random() * 3)
+    return hands[randomIndex]
+}
+
+console.log( getHand() )
