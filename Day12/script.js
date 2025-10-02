@@ -101,7 +101,7 @@ calculateBtn.addEventListener('click', function() {
         baseInput.value = '';
         heightTriInput.value = '';
         if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`
-        resultText.textContent="blue";}
+        resultText.style.color="blue";}
         else{resultText.textContent = 'Please enter valid numbers!';
             resultText.style.color="red"
         
