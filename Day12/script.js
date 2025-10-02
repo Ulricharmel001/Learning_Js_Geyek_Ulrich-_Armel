@@ -23,13 +23,14 @@ function hideAllInputs() {
 
 // Reset everything on page load
 window.addEventListener('load', function() {
-    shapeSelect.value = '';    // default option
+    shapeSelect.value = '';    
     resultText.textContent = '';
     hideAllInputs();
 });
 
 // Show relevant inputs when shape changes
 shapeSelect.addEventListener('change', function() {
+  
     const shape = shapeSelect.value;
     resultText.textContent = '';  // clear previous result
     hideAllInputs();              // hide all inputs first
@@ -49,17 +50,34 @@ shapeSelect.addEventListener('change', function() {
 // Calculate area and clear inputs
 calculateBtn.addEventListener('click', function() {
     const shape = shapeSelect.value;
+    if(shapeSelect.value===""){
+        resultText.textContent="oops you  have not select a shape"
+        resultText.style.color="red"
+
+    }
     let area = 0;
 
     if(shape === 'circle') {
         const radius = radiusInput.value;
         area = PI * radius * radius;
         radiusInput.value = '';
-    } 
+        if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;
+                    resultText.style.color="blue"}
+        else{resultText.textContent = 'Please enter valid numbers!';
+            resultText.style.color="red"
+        
+        }
+    }
     else if(shape === 'square') {
         const side = sideInput.value;
         area = side * side;
         sideInput.value = '';
+          if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`
+          resultText.style.color="blue";}
+        else{resultText.textContent = 'Please enter valid numbers!';
+            resultText.style.color='red'
+    
+        }
     } 
     else if(shape === 'rectangle') {
         const width = widthInput.value;
@@ -67,6 +85,12 @@ calculateBtn.addEventListener('click', function() {
         area = width * height;
         widthInput.value = '';
         heightRectInput.value = '';
+          if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;}
+        else{resultText.textContent = 'Please enter valid numbers!';
+            resultText.style.color="red"
+        
+        }
+
     } 
     else if(shape === 'triangle') {
         const base = baseInput.value;
@@ -74,9 +98,8 @@ calculateBtn.addEventListener('click', function() {
         area = (base * height) / 2;
         baseInput.value = '';
         heightTriInput.value = '';
-    }
-
-    // Display result
-    if(area > 0) resultText.textContent = `The area of the ${shape} is: ${area}`;
-    else resultText.textContent = 'Please enter valid numbers!';
-});
+        if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;}
+        else{resultText.textContent = 'Please enter valid numbers!';
+            resultText.style.color="red"
+        
+        }}})
