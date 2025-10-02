@@ -11,19 +11,19 @@ const heightRectInput = document.getElementById('heightRect');
 const baseInput = document.getElementById('base');
 const heightTriInput = document.getElementById('heightTri');
 
-// Function to hide all inputs
+// Function to hide all input containers
 function hideAllInputs() {
-    radiusInput.style.display = 'none';
-    sideInput.style.display = 'none';
-    widthInput.style.display = 'none';
-    heightRectInput.style.display = 'none';
-    baseInput.style.display = 'none';
-    heightTriInput.style.display = 'none';
+    radiusInput.parentElement.style.display = 'none';
+    sideInput.parentElement.style.display = 'none';
+    widthInput.parentElement.style.display = 'none';
+    heightRectInput.parentElement.style.display = 'none';
+    baseInput.parentElement.style.display = 'none';
+    heightTriInput.parentElement.style.display = 'none';
 }
 
 // Reset everything on page load
 window.addEventListener('load', function() {
-    shapeSelect.value = '';
+    shapeSelect.value = '';    // default option
     resultText.textContent = '';
     hideAllInputs();
 });
@@ -34,15 +34,15 @@ shapeSelect.addEventListener('change', function() {
     resultText.textContent = '';  // clear previous result
     hideAllInputs();              // hide all inputs first
 
-    if(shape === 'circle') radiusInput.style.display = 'inline-block';
-    else if(shape === 'square') sideInput.style.display = 'inline-block';
+    if(shape === 'circle') radiusInput.parentElement.style.display = 'block';
+    else if(shape === 'square') sideInput.parentElement.style.display = 'block';
     else if(shape === 'rectangle') {
-        widthInput.style.display = 'inline-block';
-        heightRectInput.style.display = 'inline-block';
+        widthInput.parentElement.style.display = 'block';
+        heightRectInput.parentElement.style.display = 'block';
     }
     else if(shape === 'triangle') {
-        baseInput.style.display = 'inline-block';
-        heightTriInput.style.display = 'inline-block';
+        baseInput.parentElement.style.display = 'block';
+        heightTriInput.parentElement.style.display = 'block';
     }
 });
 
