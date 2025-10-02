@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shape Area Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+  <h1>Shape Area Calculator</h1>
+
+  <form id="areaForm">
+    <label for="shape">Choose a shape:</label>
+    <select id="shape" name="shape">
+      <option value="" >--Select--</option>
+      <option value="circle">Circle</option>
+      <option value="square">Square</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="triangle">Triangle</option>
+    </select>
+
+    <!-- Circle inputs -->
+    <fieldset id="circleInputs" class="shape-inputs">
+      <input type="number" id="radius" name="radius" placeholder="Radius">
+    </fieldset>
+
+    <!-- Square inputs -->
+    <fieldset id="squareInputs" class="shape-inputs">
+      <input type="number" id="side" name="side" placeholder="Side">
+    </fieldset>
+
+    <!-- Rectangle inputs -->
+    <fieldset id="rectangleInputs" class="shape-inputs">
+      <input type="number" id="width" name="width" placeholder="Width">
+      <input type="number" id="heightRect" name="heightRect" placeholder="Height">
+    </fieldset>
+
+    <!-- Triangle inputs -->
+    <fieldset id="triangleInputs" class="shape-inputs">
+      <input type="number" id="base" name="base" placeholder="Base" required>
+      <input type="number" id="heightTri" name="heightTri" placeholder="Height" required>
+    </fieldset>
+
+    <button type="button" id="calculateBtn">Calculate Area</button>
+  </form>
+
+  <div class="result">
+    <p id="resultText"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
