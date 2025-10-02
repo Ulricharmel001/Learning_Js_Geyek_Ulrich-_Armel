@@ -85,7 +85,9 @@ calculateBtn.addEventListener('click', function() {
         area = width * height;
         widthInput.value = '';
         heightRectInput.value = '';
-          if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;}
+          
+        if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;
+          resultText.style="blue";}
         else{resultText.textContent = 'Please enter valid numbers!';
             resultText.style.color="red"
         
@@ -98,7 +100,8 @@ calculateBtn.addEventListener('click', function() {
         area = (base * height) / 2;
         baseInput.value = '';
         heightTriInput.value = '';
-        if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`;}
+        if(area > 0) {resultText.textContent = `The area of the ${shape} is: ${area}`
+        resultText.textContent="blue";}
         else{resultText.textContent = 'Please enter valid numbers!';
             resultText.style.color="red"
         
