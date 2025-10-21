@@ -26,3 +26,16 @@
   font-family: sans-serif;
   color: black;
 }
+/* 
+.Button{
+  color: white;
+  background: rgb(154, 154, 170);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 15px
+}
+.Button:hover{
+  background: hsla(0, 0%, 0%, 0.946);
+  color: orange;
+} */
