@@ -7,14 +7,14 @@ import Button from './Button/Button.jsx'
 import List from './Intern.jsx' 
 import Student from './Student.jsx'
 import  Welcome from './Welcome.jsx'
-
+import ListItems  from './List.jsx'
 
 
 function App() {
     return (
         <>
             <Header />
-
+            <ListItems/>
         
 
             {/* card element */}
