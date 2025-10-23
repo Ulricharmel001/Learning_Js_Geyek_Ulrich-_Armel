@@ -20,9 +20,9 @@ function ListItems(){
         
 
     
-    const newList = listItems.map(listItems => <li key={listItems.iid}>
-                                                {listItems.name} : &nbsp; 
-                                                {listItems.calories}</li> 
+    const newList = lowCalories.map(lowCalories => <li key={lowCalories.iid}>
+                                                {lowCalories.name} : &nbsp; 
+                                                {lowCalories.calories}</li> 
 
                                            )
     
