@@ -39,3 +39,36 @@
   background: hsla(0, 0%, 0%, 0.946);
   color: orange;
 } */
+
+
+.list  {
+color: hsl(0, 0%, 1%);
+font-weight: 3000;
+font-family: serif;
+
+
+}
+.title{
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  max-width: 50%;
+  height: 30px;
+  padding: 10px;
+
+}
+
+.student-div{
+  font-family: sans-serif;
+  border: 1px solid rebeccapurple;
+  font-size: 2em;
+  color: black;
+
+}
+.student-div p{
+  margin: 0;
+}
