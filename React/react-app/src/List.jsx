@@ -15,7 +15,12 @@ function ListItems(){
         
         
         const  lowCalories   = listItems.filter(listItems => listItems.calories < 20);
+        const highCalories  = listItems.filter(listItems => listItems.calories >20);
         
+        const listHighCalorie = highCalories.map(highCalories => <li key={highCalories.id}>
+            {highCalories.name}: &nbsp;
+            {highCalories.calories}
+        </li>)
 
         
 
@@ -26,7 +31,7 @@ function ListItems(){
 
                                            )
     
-    return(<ol><h2>{newList}</h2></ol>);
+    return(<ol><h2>{listHighCalorie}</h2></ol>);
 
 }
 
