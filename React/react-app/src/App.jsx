@@ -25,6 +25,8 @@ function App() {
                 <Button />
                 <Student name="Ulrich"    age = {30} school ="UBa"/>
                  <Student name="Emili"    age = {20} school ="Technipole"/>
+                <Student   name ='Baye Brian' age = {21} school =  'Cotech'/>
+                <Student />
             
 
             <Food />
