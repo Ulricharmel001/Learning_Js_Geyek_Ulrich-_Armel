@@ -6,6 +6,7 @@ import Card from './Card.jsx'
 import Button from './Button/Button.jsx'
 import List from './Intern.jsx' 
 import Student from './Student.jsx'
+import  Welcome from './Welcome.jsx'
 
 
 
@@ -14,15 +15,18 @@ function App() {
         <>
             <Header />
 
+        
+
             {/* card element */}
             <Card />
               <Card />
               <Card/>
+                <Button />
+
+              <Welcome  isLogedin  = {false} username ="Ulrich Armel" />
               <List/>
 
-                <Card />
                 {/* Button style with external style */}
-                <Button />
                 <Student name="Ulrich"    age = {30} school ="UBa"/>
                  <Student name="Emili"    age = {20} school ="Technipole"/>
                 <Student   name ='Baye Brian' age = {21} school =  'Cotech'/>
